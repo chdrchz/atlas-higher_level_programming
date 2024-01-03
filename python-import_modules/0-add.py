@@ -7,5 +7,4 @@ b = 2
 
 if __name__ == "__main__"
 
-result = add(a, b)
-print("{} + {} = {}".format(a, b, result))
+print("{a} + {b} = ".format(a, b))
