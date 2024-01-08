@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
 
-    num_cols = len(matrix)
-    num_rows = len(matrix[0])
+    if not matrix:
+        return[]
 
-    matrix_sq = [0 for _ in range(num_cols) for _ in range(num_rows)]
+    matrix_sq = [[0] * len(matrix[0]) for _ in range(len(matrix))]
 
-    for i in range(num_rows):
-        for j in range(num_cols):
+    for i in range(matrix):
+        for j in range(matrix[0]):
             matrix[i][j] = matrix[i][j] ** 2
 
     return matrix_sq
