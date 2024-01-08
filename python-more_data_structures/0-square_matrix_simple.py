@@ -7,5 +7,5 @@ def square_matrix_simple(matrix=[]):
     matrix_sq = [0 for _ in range(num_cols) for _ in range(num_rows)]
 
     for i in range(num_rows):
-        for i in range(num_cols):
+        for j in range(num_cols):
             matrix[i][j] == matrix[i][j] ** 2
