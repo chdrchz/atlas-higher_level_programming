@@ -8,4 +8,6 @@ def square_matrix_simple(matrix=[]):
 
     for i in range(num_rows):
         for j in range(num_cols):
-            matrix[i][j] == matrix[i][j] ** 2
+            matrix[i][j] = matrix[i][j] ** 2
+
+    return matrix_sq
