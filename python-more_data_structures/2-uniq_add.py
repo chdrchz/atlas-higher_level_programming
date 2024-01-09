@@ -1,8 +1,3 @@
 #!/usr/bin/python3
 def uniq_add(my_list=[]):
-    unique_numbers = set()
-    for num in input_list:
-        if num not in unique_numbers:
-            unique_numbers.add(num)
-    return sum(unique_numbers)
-
+    return sum(set(my_list)) if my_list else my_list
