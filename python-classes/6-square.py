@@ -5,7 +5,6 @@
 class Square:
     """This class defines a square"""
     def __init__(self, size=0):
-        """This initializes a simple square"""
         if type(size) is not int:
             raise TypeError("size must not be an integer")
         if size < 0:
@@ -13,7 +12,6 @@ class Square:
         self.__size = size
 
     def area(self):
-        """area of the square"""
         return (self.__size**2)
 
     @property
@@ -38,7 +36,6 @@ class Square:
         self.__position = value
 
     def my_print(self):
-        """this prints the square with a special character to stdout"""
         if self.__size == 0:
             print("")
         else:
