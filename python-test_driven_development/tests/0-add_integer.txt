@@ -11,7 +11,7 @@
 98
 
 'one value'
->>> add_integer(2, 98)
+>>> add_integer(2)
 100
 
 'one float value and one negative value'
