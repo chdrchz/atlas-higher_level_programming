@@ -6,4 +6,6 @@ def add_integer(a, b=98):
 
     if not (isinstance(a, (int, float)) and isinstance(b, (int, float))):
         raise TypeError("b must be an integer")
-    return a + b
+    if isinstance(a, float) or isinstance(b, float):
+        return float(a + b)
+    return int(a + b)
