@@ -17,3 +17,9 @@
 'positive and negative floating values'
 >>> matrix_divided([[9.4, 3.6, -1.2], [4.0, 1.6, 8], [1, 2, 3]], 2.0)
 [[4.7, 1.8, -0.6], [2.0, 0.8, 4.0], [0.5, 1.0, 1.5]]
+
+'div is a string'
+>>> matrix_divided([[9, 3, -1], [4, 1, 8], [1, 2, 3]], "Meco")
+Traceback (most recent call last):
+...
+TypeError: div must be a number
