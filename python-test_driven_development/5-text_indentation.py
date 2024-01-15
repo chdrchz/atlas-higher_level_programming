@@ -4,8 +4,16 @@
 
 def text_indentation(text):
     """This function prints after special characters"""
-    if not isinstance(text, str):
+    if type(text) is not str:
         raise TypeError("text must be a string")
-    lines = text.split()
-    for line in lines:
-        print(line.strip())
+    new_line = True
+    for char in text:
+        if char != ' ' or new_line is False:
+            print(char, end='')
+            new_line = False
+        elif char != ' ':
+            new_line = False
+        if char in ['.', '?', ':']:
+            print()
+            print()
+            new_line = True
