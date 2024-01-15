@@ -12,8 +12,8 @@ Traceback (most recent call last):
 ...
 TypeError: text must be a string
 
-'text is a string with severals blankspaces'
->>> text_indentation("Walter:		White?            hello.")
+'text is a string with several blankspaces'
+>>> text_indentation("Billy:		Joel?            hello.")
 Billy:
 <BLANKLINE>
 Joel?
