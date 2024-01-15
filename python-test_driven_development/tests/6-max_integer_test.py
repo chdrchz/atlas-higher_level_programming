@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """Unittest for max_integer([..])
 """
+
+
 import unittest
 max_integer = __import__('6-max_integer').max_integer
 
@@ -30,7 +32,7 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_one_negative_number(self):
         test_list = [1, 5, 99, -12, 55]
-        self.assertEqual_max_integer(test_list), 99)
+        self.assertEqual(max_integer(test_list), 99)
 
 
     def test_only_negative_numbers(self):
@@ -45,14 +47,4 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_empty_list(self):
         test_list = []
-        self.assertEqual(max_integer(test_list), None)
-
-    def max_integer(list=[]):
-        if len(list) == 0:
-            return None
-        result = list[0]
-        i = 1
-        while i < len(list):
-            if list[i] > result:
-                result = list[i]
-            i += 1       
+        self.assertEqual(max_integer(test_list), None)       
