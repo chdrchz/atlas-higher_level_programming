@@ -29,3 +29,9 @@ TypeError: div must be a number
 Traceback (most recent call last):
 ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+'matrix have an inf'
+>>> matrix_divided([[9, 3, -1], [4, float('inf'), 8], [1, 2, 3]], 3)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
