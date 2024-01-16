@@ -62,16 +62,15 @@ class Rectangle:
 
     def __str__(self):
         """This method is the string representation of the Rectangle"""
-        string = ""
-        if self.width > 0 and self.height > 0:
-            for row in range(self.height):
-                for col in range(self.width):
-                    string += Rectangle.print_symbol
-                if row < self.height - 1:
-                    string += '\n'
-            return string
-        else:
-            return string
+        rectangle = ""
+        if (self.__height or self.__width) == 0:
+            return rectangle
+        for i in range(self.__height):
+            for i in range(self.__width):
+                rectangle += str(self.print_symbol)
+            rectangle += '\n'
+        rectangle = rectangle[:-1]
+        return rectangle
 
     def __repr__(self):
         """This method returns the string representation of new object"""
