@@ -66,7 +66,7 @@ class Rectangle:
         if self.width > 0 and self.height > 0:
             for row in range(self.height):
                 for col in range(self.width):
-                    string += '#'
+                    string += Rectangle.print_symbol
                 if row < self.height - 1:
                     string += '\n'
             return string
