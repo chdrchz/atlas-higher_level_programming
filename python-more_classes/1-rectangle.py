@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This file contains a class defined as Rectangle"""
+"""This module contains a class defined as Rectangle"""
 
 
 class Rectangle:
@@ -21,12 +21,12 @@ class Rectangle:
 
     @property
     def width(self):
-    """This method defines its width"""
+        """This method defines its width"""
         return self.__width
 
     @width.setter
     def width(self, value):
-    """This method sets value to its width"""
+        """This method sets value to its width"""
         if not isinstance(width, int):
             raise TypeError("width must be an integer")
         elif width < 0:
@@ -36,12 +36,12 @@ class Rectangle:
 
     @property
     def height(self):
-    """This method defines its height"""
+        """This method defines its height"""
         return self.__height
 
     @height.setter
     def height(self, value):
-    """This method sets value to its height"""
+        """This method sets value to its height"""
         if not isinstance(height, int):
             raise TypeError("height must be an integer")
         elif height < 0:
