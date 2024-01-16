@@ -61,7 +61,7 @@ class Rectangle:
         area_2 = rect_2.area()
         if area_1 > area_2:
             return rect_1
-        if area_2 > area_1
+        if area_2 > area_1:
             return rect_2
 
     def area(self):
