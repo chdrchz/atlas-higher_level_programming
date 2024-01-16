@@ -61,4 +61,4 @@ class Rectangle:
             return ""
         top_bottom = "#" * self.__width + "\n"
         middle = ("#" + " " * (self.__width - 2) + "#\n") * (self.__height - 2)
-        return top_bottom + middle + top_bottom
+        return top_bottom + middle + top_bottom - "\n"
