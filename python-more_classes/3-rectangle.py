@@ -57,9 +57,13 @@ class Rectangle:
 
     def __str__(self):
         """This method is the string representation of the Rectangle"""
-        if self.__width == 0 or self.__height == 0:
-            return ""
-        top_bottom = "#" * self.__width + "\n"
-        middle = "#" + " " * (self.__width - 2) + "#\n"
-        middle_rows = middle * (self.__height - 2)
-        return top_bottom + middle_rows + top_bottom
+        string = ""
+        if self.width > 0 and self.height > 0:
+            for row in range(self.height):
+                for col in range(self.width):
+                    string += '#'
+                if row < self.height - 1:
+                    string += '\n'
+            return string
+        else:
+            return string
