@@ -6,7 +6,7 @@ class BaseGeometry:
     """This defines a class named BaseGeometry"""
     def area(self):
         """public instance method that calculates area"""
-        raise Exception("area() is not defined")
+        raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
         """public instance method that validates value"""
