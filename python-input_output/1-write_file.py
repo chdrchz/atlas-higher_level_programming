@@ -2,7 +2,7 @@
 """This module defines a function that writes to a file"""
 
 
-    def write_file(filename="", text=""):
+def write_file(filename="", text=""):
     """
     This function writes to a file and returns the number of new chars
     """
