@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """This module defines a class named Student"""
-import json
 
 
 class Student:
