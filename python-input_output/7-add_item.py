@@ -13,7 +13,7 @@ file_name = "add_item.json"
 my_list = []
 
 try:
-    my_list = load_from_json_file(fname)
+    my_list = load_from_json_file(file_name)
 except:
     pass
 
