@@ -1,11 +1,10 @@
 #!/usr/bin/python3
-"""This module defines a function that appends to a file"""
+"""This module defines a function that writes to a file"""
 
 
-def append_write(filename="", text=""):
+    def write_file(filename="", text=""):
     """
-    This function appends a string to the end of a text file
-    and returns the number of new characters added
+    This function writes to a file and returns the number of new chars
     """
     new_chars = 0
     with open(filename, encoding="utf-8") as file:
