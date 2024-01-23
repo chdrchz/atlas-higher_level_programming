@@ -10,12 +10,11 @@ import sys
 
 
 file_name = "add_item.json"
-my_list = []
 
 try:
     my_list = load_from_json_file(file_name)
 except:
-    pass
+    my_list = []
 
 for f in range(1, len(sys.argv)):
     my_list.append(sys.argv[f])
