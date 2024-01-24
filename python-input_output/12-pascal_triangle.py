@@ -9,7 +9,8 @@ def pascal_triangle(n):
     if n <= 0:
         my_list = []
         return my_list
-
+    
+    new_list = []
     for i in range(n):
         row = [1] * (i + 1)
         if i >= 2:
