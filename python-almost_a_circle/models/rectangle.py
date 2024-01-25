@@ -2,7 +2,7 @@
 """
 This module defines a class named Rectangle that inherits from Base
 """
-from base import Base
+Base = __import__('base').Base
 
 
 class Rectangle(Base):
@@ -43,8 +43,8 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         """X setter"""
-        self.__x = x
-    
+        self.__x = value
+
     @property
     def y(self):
         """Y property"""
@@ -53,4 +53,4 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         """Y setter"""
-        return self.__y
+        self.__y = value
