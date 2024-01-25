@@ -108,7 +108,7 @@ class Rectangle(Base):
         """This method overrides the printing"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.x, self.y, self.width, self.height)
-    
+
     def update(self, *args):
         """This method assigns attrs to args"""
         args_len = len(args)
