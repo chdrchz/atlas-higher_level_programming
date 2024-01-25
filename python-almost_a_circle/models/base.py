@@ -23,6 +23,7 @@ class Base:
         else:
             return json.dumps(list_dictionaries)
 
+    @staticmethod
     def save_to_file(cls, list_objs):
         """This method writes the JSON str representation to a file"""
         with open(cls, mode='w') as file:
