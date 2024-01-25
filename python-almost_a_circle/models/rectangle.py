@@ -112,7 +112,7 @@ class Rectangle(Base):
     def update(self, *args, **kwargs):
         """This method assigns attrs to args"""
         args_len = len(args)
-        
+
         if args_len >= 1:
             self.id = args[0]
         if args_len >= 2:
