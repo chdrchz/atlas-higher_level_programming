@@ -10,10 +10,30 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """This method creates new instances of Rectangle"""
         super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+
+        if width <= 0:
+            raise ValueError("width must be > 0")
+        if not isinstance(width, int):
+            raise TypeError("width must be an integer")
+        self.width = width
+
+        if height <= 0:
+            raise ValueError("height must be > 0")
+        if not isinstance(height, int):
+            raise TypeError("height must be an integer")
+        self.height = height
+
+        if x < 0:
+            raise ValueError("x must be > 0")
+        if not isinstance(x, int):
+            raise TypeError("x must be an integer")
+        self.x = x
+
+        if y < 0:
+            raise ValueError("y must be > 0")
+        if not isinstance(y, int):
+            raise TypeError("y must be an integer")
+        self.y = y
 
     @property
     def width(self):
