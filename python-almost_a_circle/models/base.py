@@ -9,5 +9,5 @@ class Base:
         __nb_objects = 0
         if id is not None:
             self.id = id
-        __nb_objects += 1
-        self.id = __nb_objects     
+        Base.__nb_objects += 1
+        self.id = Base.__nb_objects
