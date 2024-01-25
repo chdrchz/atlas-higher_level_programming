@@ -109,9 +109,10 @@ class Rectangle(Base):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.x, self.y, self.width, self.height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """This method assigns attrs to args"""
         args_len = len(args)
+        
         if args_len >= 1:
             self.id = args[0]
         if args_len >= 2:
@@ -122,3 +123,5 @@ class Rectangle(Base):
             self.x = args[3]
         if args_len >= 5:
             self.y = args[4]
+        for key, value in kwargs.items():
+            setattr(self, key, value)
