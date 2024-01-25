@@ -4,9 +4,9 @@
 
 class Base:
     """This is a class named Base"""
+    __nb_objects = 0
     def __init__(self, id=None):
         """This method is the class constructor"""
-        __nb_objects = 0
         if id is not None:
             self.id = id
         __nb_objects += 1
