@@ -8,7 +8,7 @@ from models.base import Base
 class Rectangle(Base):
     """This is a class Rectnagle that inherits from Base"""
     print_symbol = '#'
-    
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """This method creates new instances of Rectangle"""
         super().__init__(id)
@@ -96,7 +96,7 @@ class Rectangle(Base):
     def area(self):
         """This method calculates the area of Rectangle"""
         return self.__width * self.__height
-    
+
     def display(self):
         """This method prints the rectangle using '#'"""
         rectangle = ""
