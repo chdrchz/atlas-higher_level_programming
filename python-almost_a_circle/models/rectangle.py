@@ -9,7 +9,7 @@ class Rectangle(Base):
     """This is a class Rectnagle that inherits from Base"""
     def __init__(self, width, height, x=0, y=0, id=None):
         """This method creates new instances of Rectangle"""
-        super().__init__(self, id=None)
+        super().__init__(id)
         self.__width = width
         self.__height = height
         self.__x = x
