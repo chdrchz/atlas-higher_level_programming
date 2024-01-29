@@ -48,7 +48,7 @@ class Base:
         instance.update(**dictionary)
         return dictionary
 
-    def update(self, *args, **kwargs)
+    def update(self, *args, **kwargs):
         """This method assigns attrs to args"""
         args_len = len(args)
         
