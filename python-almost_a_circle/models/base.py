@@ -59,6 +59,7 @@ class Base:
         for key, value in kwargs.items():
             setattr(self, key, value)
 
+    @classmethod
     def create(cls, **dictionary):
         """This method returns a dict with all attributes set"""
         instance = cls.__new__(cls)
