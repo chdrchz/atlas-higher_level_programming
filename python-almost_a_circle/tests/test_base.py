@@ -2,6 +2,8 @@
 import unittest
 import os
 from models.base import Base
+from unittest.mock import patch
+from io import StringIO
 
 
 class TestBaseMethods(unittest.TestCase):
