@@ -46,7 +46,7 @@ class Base:
         """This method returns a dict with all attributes set"""
         instance = cls.__new__(cls)
         instance.update(**dictionary)
-        return dictionary
+        return instance
 
     def update(self, *args, **kwargs):
         """This method assigns attrs to args"""
