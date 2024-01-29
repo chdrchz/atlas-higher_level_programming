@@ -123,6 +123,7 @@ class Rectangle(Base):
             self.x = args[3]
         if args_len >= 5:
             self.y = args[4]
+
         for key, value in kwargs.items():
             setattr(self, key, value)
 
