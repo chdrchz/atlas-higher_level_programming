@@ -41,17 +41,11 @@ class Base:
             return []
         else:
             return json.loads(json_string)
-        
-    def create(cls, **dictionary):
-        """This method returns a dict with all attributes set"""
-        instance = cls.__new__(cls)
-        instance.update(**dictionary)
-        return instance
 
     def update(self, *args, **kwargs):
         """This method assigns attrs to args"""
         args_len = len(args)
-        
+
         if args_len >= 1:
             self.id = args[0]
         if args_len >= 2:
@@ -64,3 +58,9 @@ class Base:
             self.y = args[4]
         for key, value in kwargs.items():
             setattr(self, key, value)
+
+    def create(cls, **dictionary):
+        """This method returns a dict with all attributes set"""
+        instance = cls.__new__(cls)
+        instance.update(**dictionary)
+        return instance
