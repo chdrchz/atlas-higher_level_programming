@@ -42,26 +42,12 @@ class Base:
         else:
             return json.loads(json_string)
 
-    def update(self, *args, **kwargs):
-        """This method assigns attrs to args"""
-        args_len = len(args)
-
-        if args_len >= 1:
-            self.id = args[0]
-        if args_len >= 2:
-            self.width = args[1]
-        if args_len >= 3:
-            self.height = args[2]
-        if args_len >= 4:
-            self.x = args[3]
-        if args_len >= 5:
-            self.y = args[4]
-        for key, value in kwargs.items():
-            setattr(self, key, value)
-
     @classmethod
     def create(cls, **dictionary):
         """This method returns a dict with all attributes set"""
-        instance = cls.__new__(cls)
-        instance.update(**dictionary)
-        return instance
+        if cls.name == "Rectangle":
+            dummy = cls(1, 1)
+        if cls.name == "Square"
+            dummy = cls(1)
+        dummy.update(**dictionary)
+        return dummy
