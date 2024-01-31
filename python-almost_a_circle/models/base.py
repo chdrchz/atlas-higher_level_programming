@@ -62,3 +62,8 @@ class Base:
                 return [cls.create(**dictionary) for dictionary in list_dicts]
         except FileNotFoundError:
             return []
+
+    def draw(list_rectangles, list_squares):
+        """This method draws shapes using turtle graphics module"""
+
+        
