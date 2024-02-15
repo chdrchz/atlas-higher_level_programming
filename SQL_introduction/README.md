@@ -15,5 +15,3 @@
 <pre>$ npm start</pre>
 <h2 id="contributing">Contributing</h2>
     <p>Provide guidelines for contributing to the project, such as how to report bugs or suggest improvements.</p>
-<h2>License</h2>
-    <p>Specify the project's license and any other relevant information.</p>
