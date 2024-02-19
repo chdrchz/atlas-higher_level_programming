@@ -16,7 +16,7 @@ def match_state(username, password, dbase, searched):
 
     """Create cursor object"""
     cur = db.cursor()
-    cur.execute("SELECT * FROM {0} ORDER BY {0}.id ASC;".format(table_name))
+    cur.execute("SELECT * FROM {0} ORDER BY {0}.id ASC;".format(searched))
 
     """Access the queried data to print"""
     rows = cur.fetchall()
