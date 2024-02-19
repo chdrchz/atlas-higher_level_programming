@@ -4,8 +4,10 @@
 import MySQLdb
 import sys
 
+
 def sql_connect(usr, pw, db_name):
     """This function imports a database to use"""
+
 
     """Establish connection"""
     db = MySQLdb.connect(host="localhost",
