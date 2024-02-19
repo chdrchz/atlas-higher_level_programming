@@ -4,7 +4,7 @@
 import MySQLdb
 import sys
 
-def list_states():
+def list_states(usr, pw, db_name):
     """This function lists the states"""
 
     """Establish connection"""
