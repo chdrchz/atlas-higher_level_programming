@@ -5,7 +5,7 @@ import MySQLdb
 import sys
 
 
-def print_n_state(username, password, dbase, searched):
+def match_state(username, password, dbase, searched):
     """This function imports a database to use"""
 
     """Establish connection"""
@@ -31,4 +31,4 @@ def print_n_state(username, password, dbase, searched):
 
 
 if __name__ == "__main__":
-    print_n_state(sys.argv[1], sys.argv[2], sys.argv[3])
+    match_state(sys.argv[1], sys.argv[2], sys.argv[3])
