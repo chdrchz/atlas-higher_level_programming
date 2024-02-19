@@ -1,23 +1,25 @@
 #!/usr/bin/python3
-"""This script lists all states from a database"""
+"""This script that lists all states from a database"""
 
 import MySQLdb
 import sys
 
 def list_states():
-    """Function that lists the states"""
-    engine = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
-                         passwd=sys.argv[2], engine=sys.argv[3])
+    """This function will establish the connection, and list states"""
+    db = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
+                         passwd=sys.argv[2], db=sys.argv[3])
+    """Create a cursor object and query the data"""
+    cur = db.cursor()
+    cur.execute("SELECT * FROM states ORDER BY id")
 
-    cursor = engine.cursor()
-
-    cursor.execute("SELECT * FROM states ORDER BY id")
-    rows = cursor.fetchall()
+    """Print data"""
+    rows = cur.fetchall()
     for row in rows:
         print(row)
-
-    cursor.close()
-    engine.close()
+    
+    """Close cursor and engine"""
+    cur.close()
+    db.close()
 
 if __name__ == "__main__":
     list_states()
