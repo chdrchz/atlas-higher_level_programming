@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This module defines a function that establishes a connection to a SQL server"""
+"""This module defines a function that creates a connection to a SQL server"""
 
 import MySQLdb
 import sys
