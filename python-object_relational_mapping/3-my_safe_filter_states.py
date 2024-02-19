@@ -17,7 +17,7 @@ def safe_state(username, password, dbase, searched):
     """Create cursor object and query data"""
     cur = db.cursor()
     sql_cmd = "SELECT * FROM states WHERE name = %s ORDER BY id"  
-    cur.execute(sql_cmd, searched)
+    cur.execute(sql_cmd, (searched,))
 
     """Access the queried data to print"""
     rows = cur.fetchall()
