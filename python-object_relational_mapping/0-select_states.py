@@ -8,8 +8,11 @@ def list_states():
     """This function lists the states"""
 
     """Establish connection"""
-    db = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
-                         passwd=sys.argv[2], db=sys.argv[3])
+    db = MySQLdb.connect(host="localhost",
+                         user=usr,
+                         port=3306,
+                         passwd=pw,
+                         database=db_name)
 
     """Create a cursor object"""
     cur = db.cursor()
@@ -25,4 +28,4 @@ def list_states():
     db.close()
 
 if __name__ == "__main__":
-    list_states()
+    list_states(sys.argv[1], sys.argv[2], sys.argv[3])
