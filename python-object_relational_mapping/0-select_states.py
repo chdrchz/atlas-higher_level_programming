@@ -13,7 +13,7 @@ def list_states():
 
     """Create a cursor object"""
     cur = db.cursor()
-    cur.execute("SELECT * FROM states ORDER BY id")
+    cur.execute("SELECT * FROM states;")
 
     """Print the queried data"""
     rows = cur.fetchall()
