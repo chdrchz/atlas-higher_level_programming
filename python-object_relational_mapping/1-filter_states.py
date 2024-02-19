@@ -22,7 +22,7 @@ def print_n_state(usr, pw, db_name):
     """Access the queried data to print"""
     rows = cur.fetchall()
     for row in rows:
-        if rows[1][0] == 'N':
+        if str(row[1]).startswith("N"):
             print(row)
 
     """Close the connection and cursor object"""
