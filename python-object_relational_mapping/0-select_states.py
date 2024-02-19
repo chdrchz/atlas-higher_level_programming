@@ -4,28 +4,20 @@
 import MySQLdb
 import sys
 
-def list_states(usr, pw, db_name):
-    """This function lists the states"""
-
-    """Establish connection"""
+def sql_connect(usr, pw, db_name):
+    """This is a method to import a database"""
     db = MySQLdb.connect(host="localhost",
                          user=usr,
                          port=3306,
                          passwd=pw,
                          database=db_name)
-
-    """Create a cursor object"""
     cur = db.cursor()
     cur.execute("SELECT * FROM states;")
-
-    """Print the queried data"""
     rows = cur.fetchall()
     for row in rows:
         print(row)
-    
-    """Close connection and cursor object"""
     cur.close()
     db.close()
 
 if __name__ == "__main__":
-    list_states(sys.argv[1], sys.argv[2], sys.argv[3])
+    sql_connect(sys.argv[1], sys.argv[2], sys.argv[3])
