@@ -5,7 +5,7 @@ import MySQLdb
 import sys
 
 
-def sql_connect(usr, pw, db_name):
+def print_n_state(usr, pw, db_name):
     """This function imports a database to use"""
 
     """Establish connection"""
@@ -31,4 +31,4 @@ def sql_connect(usr, pw, db_name):
 
 
 if __name__ == "__main__":
-    sql_connect(sys.argv[1], sys.argv[2], sys.argv[3])
+    print_n_state(sys.argv[1], sys.argv[2], sys.argv[3])
