@@ -1,26 +1,25 @@
 #!/usr/bin/python3
 """This script lists all all states from a database"""
 
-from sqlalchemy import create_engine
+import MySQLdb
+import sys
 
-username = 'user'
-password = 'password'
-host = 'localhost'
-port = '3306'
-database = 'hbtn_0e_0_usa'
+"""Create an engine"""
+engine= MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
+                         passwd=sys.argv[2], engine=sys.argv[3])
 
-"""Create the engine"""
-engine = create_engine(f'mysql+pymysql://{username}:{password}@{host}:{port}/{database}', echo=True)
+"""Create a cursor object"""
+cursor = engine.cursor()
 
-"""Establishes a connection to the engine"""
-connection = engine.connect()
+"""Query the data to find all states"""
+cursor.execute("SELECT * FROM states ORDER BY id")
 
-"""Executing the data query"""
-result = connection.execute("SELECT * FROM states ORDER BY id ASC")
+"""Fetch all data from result set"""
+rows = cursor.fetchall()
 
-"""Fetch and print the states found"""
-for row in result:
-        print(row)
+"""Print the rows"""
+for row in rows:
+    print(row)
 
-"""Close the connection"""
-connection.close()
+cursor.close()
+engine.close()
