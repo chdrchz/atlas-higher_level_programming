@@ -5,17 +5,25 @@ import MySQLdb
 import sys
 
 def sql_connect(usr, pw, db_name):
-    """This is a method to import a database"""
+    """This function imports a database to use"""
+
+    """Establish connection"""
     db = MySQLdb.connect(host="localhost",
                          user=usr,
                          port=3306,
                          passwd=pw,
                          database=db_name)
+
+    """Create cursor object"""
     cur = db.cursor()
     cur.execute("SELECT * FROM states;")
+
+    """Access the queried data to print"""
     rows = cur.fetchall()
     for row in rows:
         print(row)
+
+    """Close the connection and cursor object"""
     cur.close()
     db.close()
 
