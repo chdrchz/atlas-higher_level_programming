@@ -31,4 +31,4 @@ def match_state(username, password, dbase, searched):
 
 
 if __name__ == "__main__":
-    match_state(sys.argv[1], sys.argv[2], sys.argv[3])
+    match_state(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
