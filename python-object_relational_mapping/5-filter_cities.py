@@ -17,7 +17,7 @@ def cities_for_state(username, password, dbase):
     """Create cursor object and query data"""
     cur = db.cursor()
     cur.execute("SELECT cities.name FROM cities JOIN states ON cities.state_id\
-        = states.id WHERE states.name LIKE %s ORDER BY cities.id")
+        = states.id WHERE states.name LIKE %s ORDER BY cities.id", (sys.argv[4],))
 
     """Access the queried data to print"""
     rows = cur.fetchall()
