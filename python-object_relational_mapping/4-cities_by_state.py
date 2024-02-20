@@ -5,7 +5,7 @@ import MySQLdb
 import sys
 
 
-def safe_state(username, password, dbase, searched):
+def cities(username, password, dbase):
     """This function imports a database to use"""
 
     """Establish connection"""
@@ -16,8 +16,8 @@ def safe_state(username, password, dbase, searched):
 
     """Create cursor object and query data"""
     cur = db.cursor()
-    sql_cmd = "SELECT * FROM states WHERE name = %s ORDER BY id"
-    cur.execute(sql_cmd, (searched,))
+    cur.execute("SELECT cities.id, cities.name, states.name FROM cities\
+                    JOIN states ON cities.state_id = states.id")
 
     """Access the queried data to print"""
     rows = cur.fetchall()
@@ -30,4 +30,4 @@ def safe_state(username, password, dbase, searched):
 
 
 if __name__ == "__main__":
-    safe_state(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
+    cities(sys.argv[1], sys.argv[2], sys.argv[3])
