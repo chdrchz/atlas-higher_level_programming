@@ -20,9 +20,7 @@ def cities_for_state(username, password, dbase):
         = states.id WHERE states.name LIKE %s ORDER BY cities.id", (sys.argv[4],))
 
     """Access the queried data to print"""
-    rows = cur.fetchall()
-    for row in rows:
-        print(", ".join(str(item) for item in row))
+    print(", ".join(rows[0] for rows in cur.fetchall()))
 
     """Close the connection and cursor object"""
     cur.close()
