@@ -28,7 +28,8 @@ if __name__ == "__main__":
     session = Session()
 
     """Query the data for "a" and list the result, then print"""
-    states_a = session.query(State).filter(State.name.like('%a%')).order_by(State.id).all()
+    states_a = session.query(State)\
+                  .filter(State.name.like('%a%')).order_by(State.id).all()
     for state in states_a:
         print("{}: {}".format(state.id, state.name))
 
