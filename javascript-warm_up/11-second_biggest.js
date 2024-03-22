@@ -1,7 +1,7 @@
 #!/usr/bin/node
 const args = process.argv.slice(2);
 
-function second_biggest (args) {
+function secondBiggest (args) {
   if (args.length === 0) {
     console.log(0);
     return;
@@ -14,4 +14,4 @@ function second_biggest (args) {
   console.log(args[1]);
 }
 
-second_biggest(args);
+secondBiggest(args);
