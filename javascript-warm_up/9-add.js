@@ -1,4 +1,5 @@
 #!/usr/bin/node
 function add(a, b) {
-  console.log(a + b);
+  const sum = a + b;
+  console.log(sum);
 }
