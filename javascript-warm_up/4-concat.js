@@ -1,4 +1,4 @@
 #!/usr/bin/node
-const [arg1, arg2] = process.argv.slice(2, 4);
+const argv = process.argv;
 
-console.log('arg1 + is + arg2');
+console.log(argv[2] + ' is ' + argv[3]);
