@@ -13,3 +13,5 @@ function second_biggest(args) {
   args.sort((a, b) => b - a);
   console.log(args[1]);
 }
+
+second_biggest(args);
