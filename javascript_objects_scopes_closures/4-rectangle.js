@@ -11,15 +11,16 @@ class Rectangle {
   
     // print method to print a rectangle
     print () {
-      for (let i = 1; i <= this.height; i++) {
+      for (let i = 0; i < this.height; i++) {
         console.log('X'.repeat(this.width));
       }
     }
 
     // rotate method that switches width and height
     rotate () {
+      let temp = this.width;
       this.width = this.height;
-      this.height = this.width;
+      this.height = temp;
     }
 
     // double method that multiples w + h by 2
