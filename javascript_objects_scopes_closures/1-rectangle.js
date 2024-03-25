@@ -1,8 +1,8 @@
 #!/usr/bin/node
 class Rectangle {
     constructor(w, h) {
-        w  = width;
-        h = height;
+        this.width = w;
+        this.height = h;
     }
 }
 module.exports = Rectangle;
