@@ -8,7 +8,7 @@ class Square extends square {
   }
 
   // print method that changes char printed from x to c
-  charPrint(c) {
+  charPrint (c) {
     if (c === undefined) {
       c = 'X';
     }
