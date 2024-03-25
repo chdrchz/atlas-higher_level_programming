@@ -18,8 +18,8 @@ class Rectangle {
 
     // rotate method that switches width and height
     rotate () {
-      this.width = h;
-      this.height = w;
+      this.width = this.height;
+      this.height = this.width;
     }
 
     // double method that multiples w + h by 2
