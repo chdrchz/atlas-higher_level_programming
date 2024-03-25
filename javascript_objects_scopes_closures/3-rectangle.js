@@ -9,9 +9,9 @@ class Rectangle {
       this.height = h;
     }
     // print method to print a rectangle
-    print (w, h) {
+    print () {
       for (let i = 0; i < h; i++) {
-        console.log('X'.repeat(w));
+        console.log('X'.repeat(this.width));
       }
     }
   }
