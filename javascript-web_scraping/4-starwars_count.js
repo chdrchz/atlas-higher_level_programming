@@ -1,6 +1,6 @@
 #!/usr/bin/node
 const request = require('request');
-const characterId = '18';
+const characterId = '18/';
 const filmApiUrl = process.argv[2];
 const characterApiUrl = 'https://swapi-api.hbtn.io/api/people/';
 
