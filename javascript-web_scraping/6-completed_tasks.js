@@ -13,7 +13,6 @@ request(apiUrl, function (err, response, body) {
       if (users[task.userId]) {
         users[task.userId]++;
       } else {
-        // If the user doesn't exist, initialize the count to 1
         users[task.userId] = 1;
       }
     }
